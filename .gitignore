@@ -1,0 +1,12 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# API keys
+*.key
+*.pem
+
+.DS_Store
+
+everything-claude-code/*
