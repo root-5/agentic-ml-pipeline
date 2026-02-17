@@ -1,0 +1,20 @@
+# EDA (Exploratory Data Analysis)
+
+## 概要 (Description)
+データの構造、パターン、異常値、変数間の関係を把握するための探索的データ分析を行う。
+
+## 手順 (Procedure)
+1.  **データ読み込み**: データ型、欠損値の確認 (`df.info()`, `df.describe()`).
+2.  **単変量解析**: ヒストグラム、箱ひげ図などで各変数の分布を確認。
+3.  **多変量解析**: 散布図、相関行列などで変数間の関係を確認。
+4.  **異常値検出**: ドメイン知識や統計的手法を用いて異常値を特定。
+5.  **レポート作成**: 発見事項をMarkdownセルや別途レポートにまとめる。
+
+## 使用ツール・ライブラリ (Tools)
+- pandas, numpy
+- matplotlib, seaborn
+- (Optional) ydata-profiling, sweetviz
+
+## 成果物の保存場所 (Artifacts)
+- Notebooks: `notebooks/01_eda.ipynb`
+- Reports: `output/reports/eda_summary.md` (or HTML)
