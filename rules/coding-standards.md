@@ -1,24 +1,35 @@
-# Coding Standards
+# コーディング規約
 
-## 1. File Naming Conventions
-- **Notebooks**: `[Order]_[Description].ipynb` (e.g., `01_exploratory_data_analysis.ipynb`)
-- **Scripts**: `snake_case.py`
-- **Data Files**: `snake_case.csv`, `snake_case.parquet`
-- **Models**: `[ModelType]_[Date]_[Version].pkl` (e.g., `lgbm_20231027_v1.pkl`)
+## ディレクトリ構造
 
-## 2. Directory Structure Compatibility
-- **Project Structure**:
-    - `data/`: Raw and processed data.
-    - `notebooks/`: Jupyter notebooks for experiments.
-    - `src/`: Reusable python scripts.
-    - `models/`: Trained models.
-    - `output/`: Submission files, reports.
+```txt
+project/
+├── notebooks/                       # 約ステップごとのまとまり、各 py ファイルの呼び出し元
+│   ├── 01_eda.ipynb                 # EDA、基本的にローカル用
+│   ├── 02_feature_experiment.ipynb  # 特徴量実験
+│   └── 03_training.ipynb            # 学習
+│
+├── src/               # 再利用を意識して切り出した py ファイル群
+│   ├── preprocess.py  # 前処理
+│   ├── features.py    # 特徴量エンジニアリング
+│   ├── train.py       # 学習
+│   └── validate.py    # 検証
+│
+├── input/    # 元データ
+├── assets/   # 加工済みデータ、モデル
+└── outputs/  # 提出ファイル
+```
 
-## 3. Kaggle Notebook Context
-- **Path Handling**: Ensure paths work in both local and Kaggle environments using conditional logic or configuration files.
-- **External Libraries**: If non-standard libraries are required, include installation commands (commented out by default) at the top of the notebook.
+## ファイル・ディレクトリの命名規則
 
-## 4. Code Style
-- Follow **PEP 8** guidelines.
-- Use **Type Hinting** for function definitions in `src/`.
-- Add **Docstrings** to functions and classes.
+「ディレクトリ構造」の項に記載のあるファイルについてはそれに従う。
+それ以外については以下の命名規則を適用する。
+
+- 単語は小文字、必要に応じてハイフンで区切り
+- 実験用ファイルなど似たファイルが多く生成される場合は、`[名前]-[バージョン2桁]` (例: `rawdata_preprocessed-01.csv`) に従う
+
+## コードスタイル
+
+- **PEP 8** ガイドラインに従う。
+- コメントは丁寧につける。
+- 関数やクラスには **Docstring** を追加し、概要・引数・戻り値・型を明記する。

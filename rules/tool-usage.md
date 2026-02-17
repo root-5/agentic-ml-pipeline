@@ -1,15 +1,16 @@
-# Tool Usage Guidelines
+# ツール使用ガイドライン
 
-## 1. Essential Tools Only
-- **Standard Library**: Prefer Python standard libraries whenever possible.
-- **Core DS Stack**: pandas, numpy, scikit-learn, matplotlib/seaborn.
-- **Avoid Bloat**: Do not introduce heavy frameworks unless absolutely justified by the problem requirements.
+## 必要不可欠なツールのみ使用する
 
-## 2. Tool Evalutation
-- Before adding a new tool, ask:
-    - Does it solve a critical problem?
-    - Is the maintenance cost worth the benefit?
-    - Is it compatible with the Kaggle environment?
+- **ライブラリ**: 標準ライブラリ、ベストプラクティス以外のライブラリの安易の使用には十分注意する。
+- **ツール**: 基本的にほとんど追加は不要なはず。必ず必要性を確認する。
+- **肥大化を避ける**: 不要になったり、代替可能になった際は速やかに削除する。
 
-## 3. Version Control
-- All tools and libraries should be pinned to specific versions in `requirements.txt` or environment configuration to ensure reproducibility.
+## ツールの使用
+
+- **バージョン管理**: 再現性を確保するために、すべてのツールとライブラリは `requirements.txt` や README で特定のバージョンを指定する。
+- **使用法の明確化**: 反復して使用するものについては `skills/` 内に使用方法やベストプラクティスを追加する。書き方は既存の他の SKILL.md を参考にする。
+
+## スクリプトの作成
+
+- **シェルスクリプト**: 反復的に実行する必要のあるコマンドやタスクの自動化に使用する。
