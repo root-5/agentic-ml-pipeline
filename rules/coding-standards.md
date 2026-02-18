@@ -4,6 +4,11 @@
 
 ```txt
 project/
+├── reports/        # レポート
+│   ├── summary.md  # プロジェクト全体のサマリー
+│   ├── eda.md      # 探索的データ解析結果の報告書
+│   └── task.md     # タスク管理用
+│
 ├── notebooks/                       # 約ステップごとのまとまり、各 py ファイルの呼び出し元
 │   ├── 01_eda.ipynb                 # EDA、基本的にローカル用
 │   ├── 02_feature_experiment.ipynb  # 特徴量実験
@@ -16,7 +21,7 @@ project/
 │   └── validate.py    # 検証
 │
 ├── input/    # 元データ
-├── assets/   # 加工済みデータ、モデル
+├── data/     # 加工済みデータ、モデル
 └── outputs/  # 提出ファイル
 ```
 
