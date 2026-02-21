@@ -1,3 +1,8 @@
+---
+name: planning
+description: プロジェクト全体の進行管理、次のステップの策定、結果のレビューを行う。
+---
+
 # Planning
 
 ## 概要 (Description)

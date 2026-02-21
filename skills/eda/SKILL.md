@@ -1,3 +1,8 @@
+---
+name: eda
+description: データの構造、パターン、異常値、変数間の関係を把握するための探索的データ分析を行う。
+---
+
 # EDA (Exploratory Data Analysis)
 
 ## 概要 (Description)

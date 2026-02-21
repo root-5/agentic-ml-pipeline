@@ -1,3 +1,8 @@
+---
+name: feature-engineering
+description: モデルの性能を向上させるために、既存のデータから新しい特徴量を作成する。
+---
+
 # Feature Engineering
 
 ## 概要 (Description)

@@ -1,3 +1,8 @@
+---
+name: modeling
+description: 機械学習モデルを構築し、学習させる。
+---
+
 # Modeling
 
 ## 概要 (Description)

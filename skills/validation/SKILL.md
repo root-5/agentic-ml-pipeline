@@ -1,3 +1,8 @@
+---
+name: validation
+description: 構築したモデルの性能を評価し、汎化性能を確認する。
+---
+
 # Validation
 
 ## 概要 (Description)
