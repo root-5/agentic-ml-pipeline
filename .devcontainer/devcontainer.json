@@ -6,6 +6,34 @@
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"esbenp.prettier-vscode"
+			],
+			"settings": {
+				"notebook.formatOnSave.enabled": true,
+				"notebook.formatOnCellExecution": true,
+				"[markdown]": {
+					"editor.formatOnSave": true,
+					"editor.formatOnPaste": true,
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[ipynb]": {
+					"editor.formatOnSave": true,
+					"editor.formatOnPaste": true,
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				},
+				"[python]": {
+					"editor.formatOnSave": true,
+					"editor.formatOnPaste": true,
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				}
+			}
+		}
+	},
 	"postCreateCommand": "uv sync",
 	"mounts": [
 		"source=${localEnv:HOME}/.kaggle,target=/home/vscode/.kaggle,type=bind,consistency=cached"
