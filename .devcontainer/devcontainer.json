@@ -11,7 +11,8 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-python.black-formatter",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"yzhang.markdown-all-in-one"
 			],
 			"settings": {
 				"notebook.formatOnSave.enabled": true,
