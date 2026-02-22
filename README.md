@@ -39,3 +39,27 @@ agentic-ml-pipeline/
 - Obsidian, Zettelkasten, Kaggle, タスク管理にモジュール化し、コアである AI ベースのモデル作成パイプライン機能とは疎結合にする
 - markdown フォーマッターの導入
 - Optuna 導入
+
+## 環境構築
+
+1. uv のインストール `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. uv 同期 `uv sync`
+3. Kaggle Notebook の設定
+   1. ブラウザの Kaggle の左メニューの「Create」を押下し、「Notebook」を選択、エディタ等が開く
+   2. 右メニューの「Add Input」から参加したいコンペ名を検索して追加
+   3. 任意の Notebook 名を設定する
+4. Kaggle ローカル環境の設定
+   1. `cd project`
+   2. Kaggle API を使ってカーネルをメタデータ付きでダウンロード `uv run kaggle kernels pull [user名]/[Notebook名] -p project/src/ -m`
+   3. Kaggle API を使ってメタデータからコンペ情報を取得、一時的な環境変数に保存 `export COMPETITION_NAME=$(grep -ozP '"competition_sources"\s*:\s*\[\s*\K"[^"]+' project/src/kernel-metadata.json | tr -d '"\0')`
+   4. Kaggle API を使ってメタデータからコンペ情報を取得、入力データをダウンロード `uv run kaggle competitions download $COMPETITION_NAME -p project/input/`
+   5. unzip して展開、zip の削除 `unzip project/input/$COMPETITION_NAME.zip -d project/input/$COMPETITION_NAME && rm project/input/$COMPETITION_NAME.zip`
+
+### 初期構築時
+
+1. uv 初期化 `uv init`
+2. ライブラリインストール
+   1. `uv add ipykernel`
+   2. `uv add numpy`
+   3. `uv add pandas`
+   4. `uv add kaggle`
