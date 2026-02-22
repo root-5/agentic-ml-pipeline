@@ -1,16 +1,14 @@
-# Environment files
+# 環境変数
 .env
 .env.local
 .env.*.local
 
-# API keys
+# API 関係
 *.key
 *.pem
 
+# 不要なファイル
 .DS_Store
-
-everything-claude-code/*
-test/*
 
 # プロジェクトファイル
 project/input/*.csv
