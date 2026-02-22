@@ -13,5 +13,5 @@ everything-claude-code/*
 test/*
 
 # プロジェクトファイル
-project/input/*
-project/output/*
+project/input/*.csv
+project/output/*.csv

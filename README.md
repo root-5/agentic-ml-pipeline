@@ -42,19 +42,10 @@ agentic-ml-pipeline/
 
 ## 環境構築
 
-1. uv のインストール `curl -LsSf https://astral.sh/uv/install.sh | sh`
-2. uv 同期 `uv sync`
+1. 各 VSCode 拡張機能のインストール `.vscode/extensions.json` を参照
+2. devcontainer インストール後、VSCode で devcontainer を開くと自動で環境構築される
 3. Kaggle Notebook の設定
    1. ブラウザの Kaggle の左メニューの「Create」を押下し、「Notebook」を選択、エディタ等が開く
    2. 右メニューの「Add Input」から参加したいコンペ名を検索して追加
    3. 任意の Notebook 名を設定する
-   4. Kaggle ローカル環境の設定は[こちら](skills/kaggle/SKILL.md)を参照
-
-### 初期構築時
-
-1. uv 初期化 `uv init`
-2. ライブラリインストール
-   1. `uv add ipykernel`
-   2. `uv add numpy`
-   3. `uv add pandas`
-   4. `uv add kaggle`
+   4. その後の Kaggle ローカル環境の設定は[こちら](skills/kaggle/SKILL.md)を参照
