@@ -11,3 +11,7 @@
 
 everything-claude-code/*
 test/*
+
+# プロジェクトファイル
+project/input/*
+project/output/*
