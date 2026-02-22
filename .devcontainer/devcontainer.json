@@ -1,0 +1,14 @@
+{
+	"name": "Python & uv",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"postCreateCommand": "uv sync",
+	"mounts": [
+		"source=${localEnv:HOME}/.kaggle,target=/home/vscode/.kaggle,type=bind,consistency=cached"
+	],
+	"remoteUser": "vscode"
+}
