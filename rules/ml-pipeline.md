@@ -24,10 +24,10 @@ project/
 │       ├── train.py                # 学習
 │       └── validate.py             # 検証
 │
-│
-├── input/    # 元データ、gitignore 対象
-├── data/     # 加工済みデータやモデル、gitignore 対象
-└── outputs/  # 提出ファイル、gitignore 対象
+├── input/     # 元データ、gitignore 対象
+├── data/      # 加工済みデータやモデル、gitignore 対象
+├── outputs/   # 提出ファイル、gitignore 対象
+└── README.md  # プロジェクト概要、コンペのルール、評価指標などを記載
 ```
 
 ## 具体的な流れ
